@@ -45,13 +45,13 @@ function Posts() {
 							key={post.slug}
 							className="flex flex-col gap-1 md:flex-row md:items-baseline md:gap-6"
 						>
-							<span className="text-xs uppercase tracking-[0.3em] text-muted w-28 shrink-0">
+							<span className="text-sm tabular-nums text-muted w-28 shrink-0">
 								{post.date}
 							</span>
 							<Link
 								to="/$slug"
 								params={{ slug: post.slug }}
-								className="text-lg md:text-xl font-display hover:text-accent transition"
+								className="text-lg font-semibold leading-snug tracking-[-0.015em] md:text-xl font-display hover:text-accent transition"
 							>
 								{post.title}
 							</Link>

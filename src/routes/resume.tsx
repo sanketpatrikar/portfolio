@@ -20,7 +20,7 @@ const resumePdf = "/resume-sanket-patrikar.pdf";
 
 function SectionTitle({ id, children }: { id: string; children: React.ReactNode }) {
 	return (
-		<h2 id={id} className="border-b border-[var(--border)] pb-3 text-xs font-semibold uppercase tracking-[0.3em] text-muted">
+		<h2 id={id} className="border-b border-[var(--border)] pb-3 text-sm font-semibold uppercase tracking-[0.12em] text-muted">
 			{children}
 		</h2>
 	);
@@ -30,11 +30,11 @@ function Resume() {
 	return (
 		<main className="mx-auto w-full max-w-4xl px-6 pb-28 pt-12 sm:px-10 md:mx-auto md:px-12 md:pt-16 lg:px-16">
 			<header className="border-b border-[var(--border)] pb-10">
-				<p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Resume</p>
-				<h1 className="mt-4 font-display text-4xl leading-none tracking-[-0.045em] text-[var(--heading)] sm:text-5xl">
+				<p className="text-sm font-semibold uppercase tracking-[0.12em] text-accent">Resume</p>
+				<h1 className="mt-4 font-display text-4xl font-bold leading-[1.1] tracking-[-0.04em] text-[var(--heading)] sm:text-5xl">
 					Sanket Patrikar
 				</h1>
-				<p className="mt-4 text-lg leading-relaxed text-[var(--heading)]">
+				<p className="mt-4 text-base font-medium leading-relaxed sm:text-lg text-[var(--heading)]">
 					Software Engineer <span className="text-muted">|</span> React, Node.js, PostgreSQL, AWS <span className="text-muted">|</span>{" "}
 					Modernization &amp; Performance
 				</p>
@@ -60,10 +60,10 @@ function Resume() {
 				<div className="mt-8">
 					<div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
 						<div>
-							<h3 className="text-lg font-semibold tracking-[-0.02em] text-[var(--heading)]">Kizora Software Pvt. Ltd.</h3>
+							<h3 className="text-lg font-semibold leading-snug tracking-[-0.015em] sm:text-xl text-[var(--heading)]">Kizora Software Pvt. Ltd.</h3>
 							<p className="mt-1 text-muted">Software Engineer · Nagpur, Maharashtra</p>
 						</div>
-						<p className="shrink-0 text-sm font-medium text-muted">Sep 2023 - Present</p>
+						<p className="shrink-0 text-sm font-normal leading-relaxed tabular-nums text-muted">Sep 2023 - Present</p>
 					</div>
 					<ul className="mt-7 list-disc space-y-3 pl-5 leading-relaxed marker:text-[var(--accent)]">
 						<li>
@@ -103,10 +103,10 @@ function Resume() {
 				<SectionTitle id="education-heading">Education</SectionTitle>
 				<div className="mt-8 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
 					<div>
-						<h3 className="text-lg font-semibold tracking-[-0.02em] text-[var(--heading)]">KDK College of Engineering</h3>
+						<h3 className="text-lg font-semibold leading-snug tracking-[-0.015em] sm:text-xl text-[var(--heading)]">KDK College of Engineering</h3>
 						<p className="mt-1 text-muted">Bachelor of Engineering in Information Technology · Nagpur, Maharashtra</p>
 					</div>
-					<p className="shrink-0 text-sm font-medium text-muted">Aug 2019 - May 2023</p>
+					<p className="shrink-0 text-sm font-normal leading-relaxed tabular-nums text-muted">Aug 2019 - May 2023</p>
 				</div>
 			</section>
 

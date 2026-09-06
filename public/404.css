@@ -54,13 +54,15 @@ main {
   color: var(--accent);
   font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.12em;
 }
 .title {
   margin: 0.75rem 0 0;
   color: var(--heading);
-  font-size: clamp(2.25rem, 8vw, 3.75rem);
-  letter-spacing: -0.04em;
+  font-size: clamp(2.25rem, 8vw, 3rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
 }
 .description {
   max-width: 36rem;
@@ -73,7 +75,8 @@ a {
   width: max-content;
   margin-top: 2rem;
   color: var(--accent);
-  font-size: 1.125rem;
+  font-size: 1rem;
+  font-weight: 600;
   text-decoration: none;
 }
 a:hover {

@@ -44,10 +44,10 @@ export function SiteNavigation() {
 
 				<div className="pb-5 pt-3 sm:pt-4">
 					<Link to="/" className="block w-fit">
-						<p className="font-display text-[2.15rem] font-bold leading-[0.95] tracking-[-0.045em] text-[var(--heading)] sm:text-[2.6rem]">
+						<p className="font-display text-[2rem] font-bold leading-[1.1] tracking-[-0.04em] text-[var(--heading)] sm:text-[2.75rem]">
 							Sanket Patrikar
 						</p>
-						<p className="mt-3 text-base text-muted sm:text-lg">Software engineer in Nagpur, India</p>
+						<p className="mt-2 text-sm font-medium leading-relaxed text-muted sm:text-base">Software engineer in Nagpur, India</p>
 					</Link>
 
 				</div>
