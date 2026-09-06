@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { MapPin } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 
 import { getCanonicalLink, homeStructuredData } from "@/lib/seo";
 
@@ -38,9 +38,10 @@ function App() {
 
 				<Link
 					to="/resume"
-					className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[var(--heading)] transition-colors hover:text-[var(--accent)]"
+					className="mt-8 inline-flex items-center gap-2 text-sm font-semibold leading-5 text-[var(--heading)] transition-colors hover:text-[var(--accent)]"
 				>
-					View resume <span aria-hidden="true">→</span>
+					<span>View resume</span>
+					<ArrowRight className="size-4 shrink-0" strokeWidth={2} aria-hidden="true" />
 				</Link>
 			</section>
 
