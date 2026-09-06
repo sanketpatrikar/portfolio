@@ -47,7 +47,7 @@ export function SocialLinks({ className = "" }: { className?: string }) {
 					rel="me"
 					aria-label={link.label}
 					title={link.label}
-					className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-[var(--surface)] transition-colors hover:bg-[var(--accent-soft)] hover:text-[var(--accent-strong)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:size-10"
+					className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-[#f3f3f3] text-[#2f3340] transition-colors hover:bg-[#e5e5e5] hover:text-[#171923] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:size-10"
 				>
 					{"icon" in link ? (
 						<link.icon aria-hidden="true" className="size-5" strokeWidth={1.8} />
