@@ -1,3 +1,5 @@
+import { Mail, Rss } from "lucide-react";
+
 const links = [
 	{
 		label: "X / Twitter",
@@ -26,26 +28,18 @@ const links = [
 	{
 		label: "Email",
 		href: "mailto:sanketspatrikar@gmail.com",
-		iconClassName: "size-[21px]",
-		path: <path d="M3 5.5h18v13H3v-13Zm0 1 9 7 9-7" fill="none" stroke="currentColor" strokeWidth="1.8" />,
+		icon: Mail,
 	},
 	{
 		label: "RSS",
 		href: "/feed.xml",
-		iconClassName: "size-[20px]",
-		path: (
-			<>
-				<path d="M4 11a9 9 0 0 1 9 9" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-				<path d="M4 4a16 16 0 0 1 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-				<circle cx="5" cy="19" r="1.5" />
-			</>
-		),
+		icon: Rss,
 	},
 ] as const;
 
 export function SocialLinks({ className = "" }: { className?: string }) {
 	return (
-		<div className={`flex items-center gap-5 text-muted ${className}`}>
+		<div className={`flex items-center gap-1.5 text-[var(--ink)] ${className}`}>
 			{links.map((link) => (
 				<a
 					key={link.label}
@@ -53,11 +47,15 @@ export function SocialLinks({ className = "" }: { className?: string }) {
 					rel="me"
 					aria-label={link.label}
 					title={link.label}
-					className="transition-colors hover:text-[var(--heading)] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
+					className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-[var(--surface)] transition-colors hover:bg-[var(--accent-soft)] hover:text-[var(--accent-strong)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:size-10"
 				>
-					<svg aria-hidden="true" viewBox="0 0 24 24" className={`${link.iconClassName} fill-current`}>
-						{link.path}
-					</svg>
+					{"icon" in link ? (
+						<link.icon aria-hidden="true" className="size-5" strokeWidth={1.8} />
+					) : (
+						<svg aria-hidden="true" viewBox="0 0 24 24" className={`${link.iconClassName} fill-current`}>
+							{link.path}
+						</svg>
+					)}
 				</a>
 			))}
 		</div>

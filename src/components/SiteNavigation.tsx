@@ -38,7 +38,7 @@ export function SiteNavigation() {
 					</Link>
 
 					<div className="pt-4 sm:pt-5">
-						<SocialLinks className="gap-1.5 sm:gap-3 [&>a]:inline-flex [&>a]:size-8 [&>a]:items-center [&>a]:justify-center [&>a]:rounded-full [&>a]:border [&>a]:border-[var(--border)] [&>a]:bg-[var(--surface)] [&>a]:shadow-sm sm:[&>a]:size-10" />
+						<SocialLinks className="gap-1 sm:gap-2" />
 					</div>
 				</div>
 
