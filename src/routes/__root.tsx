@@ -72,8 +72,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body className="min-h-dvh antialiased">
         <div className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col px-5 sm:px-6">
           <nav aria-label="Main navigation" className="flex items-center gap-6 pt-6 text-sm font-medium text-muted">
-            <Link to="/" activeOptions={{ exact: true }} className="nav-link" activeProps={{ className: "text-[var(--heading)]" }}>
-              home
+            <Link to="/" aria-label="Home" activeOptions={{ exact: true }} className="nav-link" activeProps={{ className: "text-[var(--heading)]" }}>
+              ~
             </Link>
           </nav>
           <div className="site-content flex-1">
