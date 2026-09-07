@@ -51,7 +51,7 @@ const links = [
 
 export function SocialLinks({ className = "" }: { className?: string }) {
   return (
-    <nav aria-label="Social links" className={`flex flex-wrap items-center justify-end text-[var(--muted)] ${className}`}>
+    <nav aria-label="Social links" className={`flex flex-wrap items-center justify-end gap-2 sm:gap-3 ${className}`}>
       {links.map((link) => (
         <a
           key={link.label}
@@ -59,7 +59,7 @@ export function SocialLinks({ className = "" }: { className?: string }) {
           rel="me"
           aria-label={link.label}
           title={link.label}
-          className="inline-flex size-7 shrink-0 items-center justify-center transition-[color,background-color,transform] duration-200 hover:bg-[var(--surface)] hover:text-[var(--heading)] focus-visible:bg-[var(--surface)] focus-visible:text-[var(--heading)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] active:scale-95 motion-reduce:transition-none"
+          className="inline-flex size-7 shrink-0 items-center justify-center text-[light-dark(#737373,#a3a3a3)] transition-[color,background-color,transform] duration-200 hover:bg-[var(--surface)] hover:text-[light-dark(#404040,#d4d4d4)] focus-visible:bg-[var(--surface)] focus-visible:text-[light-dark(#404040,#d4d4d4)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] active:scale-95 motion-reduce:transition-none"
         >
           {"icon" in link ? (
             <link.icon aria-hidden="true" className="size-4" strokeWidth={1.8} />
