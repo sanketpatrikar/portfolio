@@ -2,6 +2,7 @@ import { HeadContent, Scripts, createRootRoute, useRouterState } from "@tanstack
 import { useEffect, useRef } from "react";
 
 import { NotFound } from "@/components/NotFound";
+import { SocialLinks } from "@/components/SocialLinks";
 import { SiteNavigation } from "@/components/SiteNavigation";
 import { reloadOnPreloadErrorScript } from "@/lib/preload-recovery";
 import { getSeoMeta } from "@/lib/seo";
@@ -89,11 +90,14 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         />
       </head>
       <body className="min-h-screen antialiased">
-        <div className="mx-auto min-h-screen w-full max-w-5xl lg:border-x lg:border-[var(--border)]">
+        <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col lg:border-x lg:border-[var(--border)]">
           {showSiteNavigation ? <SiteNavigation /> : null}
-          <div className="site-content">
+          <div className="site-content flex-1">
             <RouteTransition>{children}</RouteTransition>
           </div>
+          <footer className="mx-auto flex w-full max-w-[44rem] px-6 pb-8 pt-6 sm:px-10 md:px-12 lg:px-16">
+            <SocialLinks />
+          </footer>
         </div>
         <Scripts />
       </body>
