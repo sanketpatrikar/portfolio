@@ -16,7 +16,10 @@ const NotFound = () => (
 export const getRouter = () => {
 	const router = createRouter({
 		defaultNotFoundComponent: NotFound,
-		defaultPreloadStaleTime: 0,
+		defaultPreload: "intent",
+		defaultPreloadDelay: 0,
+		defaultPreloadStaleTime: 30_000,
+		defaultViewTransition: true,
 		routeTree,
 		scrollRestoration: true,
 	});

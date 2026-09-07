@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Download } from "lucide-react";
 
 import { getCanonicalLink, getSeoMeta } from "@/lib/seo";
@@ -29,14 +29,14 @@ function SectionTitle({ id, children }: { id: string; children: React.ReactNode 
 function Resume() {
 	return (
 		<main className="w-full pb-16 pt-10 md:pt-16">
-			<a
-        href="/"
+			<Link
+        to="/"
         aria-label="Back to home"
         title="Back to home"
         className="mb-6 flex size-10 items-center justify-center rounded-full border border-[var(--border)] text-[var(--heading)] transition-colors hover:bg-[var(--accent-soft)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
       >
         <ArrowLeft className="size-5" aria-hidden="true" />
-      </a>
+      </Link>
 			<header className="border-b border-[var(--border)] pb-6">
 				<p className="text-sm font-medium text-muted">Resume</p>
 				<h1 className="mt-2 text-2xl font-medium leading-8 tracking-tight text-[var(--heading)]">

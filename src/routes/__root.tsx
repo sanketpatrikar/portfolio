@@ -1,5 +1,4 @@
-import { HeadContent, Scripts, createRootRoute, useRouterState } from "@tanstack/react-router";
-import { useEffect, useRef } from "react";
+import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
 
 import { NotFound } from "@/components/NotFound";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -47,23 +46,6 @@ export const Route = createRootRoute({
   shellComponent: RootDocument,
 });
 
-function RouteTransition({ children }: { children: React.ReactNode }) {
-  const pathname = useRouterState({
-    select: (state) => state.location.pathname,
-  });
-  const isInitialRender = useRef(true);
-
-  useEffect(() => {
-    isInitialRender.current = false;
-  }, []);
-
-  return (
-    <div key={pathname} className={isInitialRender.current ? undefined : "page-enter"}>
-      {children}
-    </div>
-  );
-}
-
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -90,7 +72,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body className="min-h-dvh antialiased">
         <div className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col px-5 sm:px-6">
           <div className="site-content flex-1">
-            <RouteTransition>{children}</RouteTransition>
+            {children}
           </div>
           <footer className="flex w-full flex-wrap items-center gap-4 border-t border-[var(--border)] py-6">
             <SocialLinks />
