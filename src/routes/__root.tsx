@@ -89,8 +89,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           }}
         />
       </head>
-      <body className="min-h-screen antialiased">
-        <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col lg:border-x lg:border-[var(--border)]">
+      <body className="min-h-dvh antialiased">
+        <div className="mx-auto flex min-h-dvh w-full max-w-5xl flex-col lg:border-x lg:border-[var(--border)]">
           {showSiteNavigation ? <SiteNavigation /> : null}
           <div className="site-content flex-1">
             <RouteTransition>{children}</RouteTransition>
