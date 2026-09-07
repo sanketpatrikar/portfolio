@@ -1,6 +1,7 @@
 import { HeadContent, Link, Scripts, createRootRoute } from "@tanstack/react-router";
 
 import { NotFound } from "@/components/NotFound";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { SocialLinks } from "@/components/SocialLinks";
 import { reloadOnPreloadErrorScript } from "@/lib/preload-recovery";
 import { getSeoMeta } from "@/lib/seo";
@@ -71,10 +72,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="min-h-dvh antialiased">
         <div className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col px-5 sm:px-6">
-          <nav aria-label="Main navigation" className="flex items-center gap-6 pt-6 text-sm font-medium text-muted">
+          <nav aria-label="Main navigation" className="flex items-center justify-between gap-6 pt-6 text-sm font-medium text-muted">
             <Link to="/" aria-label="Home" activeOptions={{ exact: true }} className="nav-link" activeProps={{ className: "text-[var(--heading)]" }}>
               ~
             </Link>
+            <ThemeToggle />
           </nav>
           <div className="site-content flex-1">
             {children}

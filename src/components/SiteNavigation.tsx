@@ -1,8 +1,6 @@
 import { Link } from "@tanstack/react-router"
 import { MapPin } from "lucide-react"
 
-import { ThemeToggle } from "@/components/ThemeToggle"
-
 export function SiteNavigation() {
   return (
     <header className="flex items-start justify-between gap-4 pb-8 pt-10 md:pt-16">
@@ -16,7 +14,6 @@ export function SiteNavigation() {
           Nagpur, India.
         </p>
       </div>
-      <ThemeToggle />
     </header>
   )
 }
