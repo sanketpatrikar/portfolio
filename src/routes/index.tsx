@@ -22,13 +22,13 @@ function App() {
 			<section>
 				<div className="space-y-5 text-base leading-7">
 					<p>
-						<strong className="font-medium text-[var(--heading)]">Right now,</strong> I
-						spend most of my time building software, trying to keep up with the latest AI
-						releases, and reading up on the current in-trend thing on X.
+						Hi, I'm Sanket. I love building things for fun, learning, and for experimentation.
 					</p>
 					<p>
-						Alongside that, I tinker with tools &amp; technologies, and write when I have
-						something worth sharing.
+						Highly interested in LLMs, agents, search engines, how AI can improve our lives.
+					</p>
+					<p>
+						Other interests are reading about astronomy, history, science, urban design, and other branches of technology in general.
 					</p>
 					<p className="flex items-center gap-2 text-sm font-medium leading-relaxed text-muted">
 						<MapPin className="size-4 shrink-0" aria-hidden="true" />
