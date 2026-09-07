@@ -20,7 +20,7 @@ const resumePdf = "/resume-sanket-patrikar.pdf";
 
 function SectionTitle({ id, children }: { id: string; children: React.ReactNode }) {
 	return (
-		<h2 id={id} className="border-b border-[var(--border)] pb-3 text-base font-medium text-[var(--heading)]">
+		<h2 id={id} className="border-b border-[var(--border)] pb-3 text-base font-semibold text-[var(--heading)]">
 			{children}
 		</h2>
 	);
@@ -29,15 +29,14 @@ function SectionTitle({ id, children }: { id: string; children: React.ReactNode 
 function Resume() {
 	return (
 		<main className="w-full pb-16 pt-10 md:pt-16">
-			<header className="border-b border-[var(--border)] pb-6">
-				<h1 className="text-2xl font-semibold leading-8 tracking-tight text-[var(--heading)]">
-					Sanket Patrikar
-				</h1>
-				<p className="mt-3 text-base font-normal leading-relaxed text-[var(--heading)]">
-					Software Engineer <span className="text-muted">|</span> React, Node.js, PostgreSQL, AWS <span className="text-muted">|</span>{" "}
-					Modernization &amp; Performance
+			<h1 className="text-2xl font-semibold leading-8 tracking-tight text-[var(--heading)]">Resume</h1>
+			<header className="mt-6 border-b border-[var(--border)] pb-6">
+				<p className="text-xl font-medium leading-7 tracking-tight text-[var(--heading)]">Sanket Patrikar</p>
+				<p className="mt-1 text-base font-medium leading-6 text-[var(--ink)]">Software Engineer</p>
+				<p className="mt-2 text-sm font-normal leading-6 text-muted">
+					React, Node.js, PostgreSQL, AWS <span aria-hidden="true">·</span> Modernization &amp; Performance
 				</p>
-				<div className="mt-6 flex flex-wrap gap-x-3 gap-y-2 text-sm leading-relaxed text-muted">
+				<div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 text-sm leading-relaxed text-muted">
 					<span>Nagpur, Maharashtra</span>
 					<span aria-hidden="true">|</span>
 					<a className="nav-link" href="mailto:sanketspatrikar@gmail.com">

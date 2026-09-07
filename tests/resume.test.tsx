@@ -42,7 +42,7 @@ test("browser history returns home and supports repeat resume visits", async () 
   await router.load();
   const page = render(createElement(RouterProvider, { router }));
   for (let visit = 0; visit < 2; visit++) {
-    await waitFor(() => expect(page.getByRole("heading", { name: "Sanket Patrikar" })).toBeTruthy());
+    await waitFor(() => expect(page.getByRole("heading", { name: "Resume", level: 1 })).toBeTruthy());
     expect(page.queryByRole("link", { name: "Back to home" })).toBeNull();
     router.history.back();
     await waitFor(() => expect(router.state.location.pathname).toBe("/"));
