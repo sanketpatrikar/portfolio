@@ -20,31 +20,31 @@ function makeRouter(isServer = false) {
   });
   return createRouter({
     routeTree: root.addChildren([home, resume]),
-    history: createMemoryHistory({ initialEntries: ["/resume"] }),
+    history: createMemoryHistory({ initialEntries: ["/", "/resume"] }),
     isServer,
   });
 }
 
 afterEach(cleanup);
 
-test("resume serves experience, a home link and PDF without client JavaScript", async () => {
+test("resume serves experience and PDF without client JavaScript", async () => {
   const router = makeRouter(true);
   await router.load();
   const html = renderToStaticMarkup(createElement(RouterProvider, { router }));
   expect(html).toContain("Kizora Software");
   expect(html).toContain('href="/resume-sanket-patrikar.pdf"');
-  expect(html).toContain('href="/"');
+  expect(html).not.toContain('aria-label="Back to home"');
   expect(html).toContain("Education");
 });
 
-test("resume back link navigates client-side and supports repeat visits", async () => {
+test("browser history returns home and supports repeat resume visits", async () => {
   const router = makeRouter();
   await router.load();
   const page = render(createElement(RouterProvider, { router }));
   for (let visit = 0; visit < 2; visit++) {
-    await waitFor(() => expect(page.getByRole("link", { name: "Back to home" })).toBeTruthy());
-    const defaultAllowed = fireEvent.click(page.getByRole("link", { name: "Back to home" }), { button: 0 });
-    expect(defaultAllowed).toBe(false);
+    await waitFor(() => expect(page.getByRole("heading", { name: "Sanket Patrikar" })).toBeTruthy());
+    expect(page.queryByRole("link", { name: "Back to home" })).toBeNull();
+    router.history.back();
     await waitFor(() => expect(router.state.location.pathname).toBe("/"));
     fireEvent.click(page.getByRole("link", { name: "Open resume" }), { button: 0 });
     await waitFor(() => expect(router.state.location.pathname).toBe("/resume"));
