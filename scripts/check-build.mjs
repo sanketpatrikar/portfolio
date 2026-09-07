@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { strict as assert } from "node:assert";
 
 const read = (path) => readFileSync(`dist/client/${path}`, "utf8");
-assert.match(read("index.html"), /View resume/, "home must prerender the resume link");
+assert.match(read("index.html"), /<a\b[^>]*\bhref="\/resume"[^>]*>/, "home must prerender the resume link");
 assert.match(read("resume/index.html"), /Kizora Software/, "resume must prerender experience");
 assert.match(read("resume/index.html"), /resume-sanket-patrikar\.pdf/, "resume must link its PDF");
 assert.deepEqual(
