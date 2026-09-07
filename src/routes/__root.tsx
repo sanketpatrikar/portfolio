@@ -1,4 +1,4 @@
-import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
+import { HeadContent, Link, Scripts, createRootRoute } from "@tanstack/react-router";
 
 import { NotFound } from "@/components/NotFound";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -71,6 +71,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="min-h-dvh antialiased">
         <div className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col px-5 sm:px-6">
+          <nav aria-label="Main navigation" className="flex items-center gap-6 pt-6 text-sm font-medium text-muted">
+            <Link to="/" activeOptions={{ exact: true }} className="nav-link" activeProps={{ className: "text-[var(--heading)]" }}>
+              home
+            </Link>
+          </nav>
           <div className="site-content flex-1">
             {children}
           </div>
