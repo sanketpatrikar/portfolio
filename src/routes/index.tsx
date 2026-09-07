@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { MapPin } from "lucide-react";
+import { ArrowUpRight, MapPin } from "lucide-react";
 
 import { getCanonicalLink, homeStructuredData } from "@/lib/seo";
 
@@ -44,13 +44,14 @@ function App() {
           Sections
         </h2>
         <nav aria-labelledby="sections-heading" className="mt-3">
-          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+          <ul className="flex flex-wrap gap-x-3 gap-y-2">
             <li>
               <Link
                 to="/resume"
-                className="inline-flex min-h-7 items-center text-sm font-medium text-[var(--heading)] underline decoration-[var(--border)] underline-offset-4 transition-colors hover:text-[var(--accent)] hover:decoration-current focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
+                className="inline-flex min-h-7 items-center gap-0.5 rounded-sm text-base font-normal text-[light-dark(#000000,#fffffff2)] underline decoration-[light-dark(#52525b33,#ffffff33)] decoration-2 underline-offset-2 transition-colors duration-150 hover:decoration-[light-dark(#52525b66,#ffffff66)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] motion-reduce:transition-none"
               >
-                /resume
+                <span>resume</span>
+                <ArrowUpRight className="size-2.5 self-start mt-1 shrink-0" strokeWidth={2} aria-hidden="true" />
               </Link>
             </li>
           </ul>
