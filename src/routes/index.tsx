@@ -39,11 +39,11 @@ function App() {
 			</section>
 
 
-      <section className="mt-8" aria-labelledby="others-heading">
-        <h2 id="others-heading" className="text-sm font-semibold tracking-wide text-muted">
-          Others
+      <section className="mt-8" aria-labelledby="sections-heading">
+        <h2 id="sections-heading" className="text-sm font-semibold tracking-wide text-muted">
+          Sections
         </h2>
-        <nav aria-labelledby="others-heading" className="mt-3">
+        <nav aria-labelledby="sections-heading" className="mt-3">
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             <li>
               <Link
