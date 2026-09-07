@@ -20,22 +20,12 @@ const links = [
   {
     label: "LinkedIn",
     href: "https://linkedin.com/in/sanketpatrikar",
-    iconClassName: "size-[18px]",
-    path: (
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.063 2.063 0 1 1 0-4.126 2.063 2.063 0 0 1 0 4.126zM6.894 20.452H3.777V9h3.117v11.452z" />
-    ),
+    image: "/social/linkedin.svg",
   },
   {
     label: "Instagram",
     href: "https://www.instagram.com/patrikar.sanket/",
-    iconClassName: "size-4",
-    path: (
-      <g fill="none" stroke="currentColor" strokeWidth={1.8}>
-        <rect x="3" y="3" width="18" height="18" rx="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-      </g>
-    ),
+    image: "/social/instagram.svg",
   },
   {
     label: "Email",
@@ -61,7 +51,9 @@ export function SocialLinks({ className = "" }: { className?: string }) {
           title={link.label}
           className="inline-flex size-7 shrink-0 items-center justify-center text-[light-dark(#737373,#a3a3a3)] transition-[color,background-color,transform] duration-200 hover:bg-[var(--surface)] hover:text-[light-dark(#404040,#d4d4d4)] focus-visible:bg-[var(--surface)] focus-visible:text-[light-dark(#404040,#d4d4d4)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] active:scale-95 motion-reduce:transition-none"
         >
-          {"icon" in link ? (
+          {"image" in link ? (
+            <img src={link.image} alt="" aria-hidden="true" width="16" height="16" className="size-4 grayscale brightness-125" />
+          ) : "icon" in link ? (
             <link.icon aria-hidden="true" className="size-4" strokeWidth={1.8} />
           ) : (
             <svg aria-hidden="true" viewBox="0 0 24 24" className={`${link.iconClassName} fill-current`}>
