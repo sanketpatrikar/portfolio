@@ -1,6 +1,8 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 
+import { SiteNavigation } from "@/components/SiteNavigation";
+
 import { getCanonicalLink, homeStructuredData } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -18,6 +20,8 @@ export const Route = createFileRoute("/")({
 
 function App() {
 	return (
+    <>
+      <SiteNavigation />
 		<main className="w-full max-w-[58ch] pb-12">
 			<section>
 				<div className="space-y-5 text-base leading-7">
@@ -56,5 +60,6 @@ function App() {
 				<p className="mt-6 text-lg text-muted">Projects will appear here when they are ready.</p>
 			</section>
 		</main>
+    </>
 	);
 }

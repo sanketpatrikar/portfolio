@@ -3,14 +3,12 @@ import { useEffect, useRef } from "react";
 
 import { NotFound } from "@/components/NotFound";
 import { SocialLinks } from "@/components/SocialLinks";
-import { SiteNavigation } from "@/components/SiteNavigation";
 import { reloadOnPreloadErrorScript } from "@/lib/preload-recovery";
 import { getSeoMeta } from "@/lib/seo";
 import { themeScript } from "@/lib/theme";
 
 import appCss from "../styles.css?url";
 
-const showSiteNavigation = true;
 const umamiWebsiteId = import.meta.env.VITE_UMAMI_WEBSITE_ID;
 
 export const Route = createRootRoute({
@@ -91,7 +89,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="min-h-dvh antialiased">
         <div className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col px-5 sm:px-6">
-          {showSiteNavigation ? <SiteNavigation /> : null}
           <div className="site-content flex-1">
             <RouteTransition>{children}</RouteTransition>
           </div>
