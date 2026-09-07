@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 import { getCanonicalLink, homeStructuredData } from "@/lib/seo";
 
@@ -36,14 +36,26 @@ function App() {
 					</p>
 				</div>
 
-				<Link
-					to="/resume"
-					className="mt-8 inline-flex items-center gap-2 text-sm font-semibold leading-5 text-[var(--heading)] transition-colors hover:text-[var(--accent)]"
-				>
-					<span>View resume</span>
-					<ArrowRight className="size-4 shrink-0" strokeWidth={2} aria-hidden="true" />
-				</Link>
 			</section>
+
+
+      <section className="mt-8" aria-labelledby="others-heading">
+        <h2 id="others-heading" className="text-sm font-semibold tracking-wide text-muted">
+          Others
+        </h2>
+        <nav aria-labelledby="others-heading" className="mt-3">
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            <li>
+              <Link
+                to="/resume"
+                className="inline-flex min-h-7 items-center text-sm font-medium text-[var(--heading)] underline decoration-[var(--border)] underline-offset-4 transition-colors hover:text-[var(--accent)] hover:decoration-current focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
+              >
+                /resume
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </section>
 
 			<section className="projects-section mt-24" aria-labelledby="projects-heading">
 				<h2 id="projects-heading" className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
