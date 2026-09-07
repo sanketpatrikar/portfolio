@@ -49,14 +49,14 @@ export function SocialLinks({ className = "" }: { className?: string }) {
           rel="me"
           aria-label={link.label}
           title={link.label}
-          className="inline-flex size-7 shrink-0 items-center justify-center text-[light-dark(#737373,#a3a3a3)] transition-[color,background-color,transform] duration-200 hover:bg-[var(--surface)] hover:text-[light-dark(#404040,#d4d4d4)] focus-visible:bg-[var(--surface)] focus-visible:text-[light-dark(#404040,#d4d4d4)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] active:scale-95 motion-reduce:transition-none"
+          className="group inline-flex size-7 shrink-0 items-center justify-center text-[light-dark(#72736a,#a5aa9f)] transition-[color,background-color,transform] duration-200 hover:bg-[var(--surface)] hover:text-[light-dark(#2c2d29,#eeeee7)] focus-visible:bg-[var(--surface)] focus-visible:text-[light-dark(#2c2d29,#eeeee7)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] active:scale-95 motion-reduce:transition-none"
         >
           {"image" in link ? (
-            <img src={link.image} alt="" aria-hidden="true" width="16" height="16" className="size-4 grayscale brightness-125" />
+            <img src={link.image} alt="" aria-hidden="true" width="16" height="16" className="size-4 grayscale opacity-60 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none" />
           ) : "icon" in link ? (
-            <link.icon aria-hidden="true" className="size-4" strokeWidth={1.8} />
+            <link.icon aria-hidden="true" className="size-4 grayscale opacity-60 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none" strokeWidth={1.8} />
           ) : (
-            <svg aria-hidden="true" viewBox="0 0 24 24" className={`${link.iconClassName} fill-current`}>
+            <svg aria-hidden="true" viewBox="0 0 24 24" className={`${link.iconClassName} fill-current grayscale opacity-60 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none`}>
               {link.path}
             </svg>
           )}
