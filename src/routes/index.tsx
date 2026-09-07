@@ -39,11 +39,7 @@ function App() {
 			</section>
 
 
-      <section className="mt-8" aria-labelledby="sections-heading">
-        <h2 id="sections-heading" className="text-base font-medium text-[var(--heading)]">
-          Sections
-        </h2>
-        <nav aria-labelledby="sections-heading" className="mt-2">
+        <nav aria-label="Pages" className="mt-8">
           <ul className="flex flex-wrap gap-x-3 gap-y-2">
             <li>
               <Link
@@ -56,7 +52,6 @@ function App() {
             </li>
           </ul>
         </nav>
-      </section>
 
 			<section className="projects-section mt-24" aria-labelledby="projects-heading">
 				<h2 id="projects-heading" className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
