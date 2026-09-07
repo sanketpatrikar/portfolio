@@ -38,7 +38,7 @@ export function SiteNavigation() {
 					</Link>
 
 					<div className="pt-4 sm:pt-5">
-						<SocialLinks className="gap-1 sm:gap-2" />
+						<SocialLinks />
 					</div>
 				</div>
 
