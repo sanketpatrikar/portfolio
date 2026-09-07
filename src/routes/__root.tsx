@@ -90,12 +90,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         />
       </head>
       <body className="min-h-dvh antialiased">
-        <div className="mx-auto flex min-h-dvh w-full max-w-5xl flex-col lg:border-x lg:border-[var(--border)]">
+        <div className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col px-5 sm:px-6">
           {showSiteNavigation ? <SiteNavigation /> : null}
           <div className="site-content flex-1">
             <RouteTransition>{children}</RouteTransition>
           </div>
-          <footer className="mx-auto flex w-full max-w-[44rem] px-6 pb-8 pt-6 sm:px-10 md:px-12 lg:px-16">
+          <footer className="flex w-full flex-wrap items-center gap-4 border-t border-[var(--border)] py-6">
             <SocialLinks />
           </footer>
         </div>

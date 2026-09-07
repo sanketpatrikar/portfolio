@@ -36,7 +36,7 @@ export const Route = createFileRoute("/posts")({
 
 function Posts() {
 	return (
-		<main className="mx-auto w-full max-w-4xl px-6 py-12 sm:px-10 md:mx-auto md:px-12 md:py-20 lg:px-16">
+		<main className="w-full pb-16">
 			<Header>Posts</Header>
 			<div className="space-y-5">
 				{posts.length > 0 ? (
@@ -51,7 +51,7 @@ function Posts() {
 							<Link
 								to="/$slug"
 								params={{ slug: post.slug }}
-								className="text-lg font-semibold leading-snug tracking-[-0.015em] md:text-xl font-display hover:text-accent transition"
+								className="text-base font-medium leading-snug hover:text-accent transition"
 							>
 								{post.title}
 							</Link>

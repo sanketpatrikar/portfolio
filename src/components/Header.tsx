@@ -24,7 +24,7 @@ export const Header = ({ children }: { children: React.ReactNode }) => {
 					<path d="M19 12H5M12 19l-7-7 7-7" />
 				</svg>
 			</button>
-			<h1 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.035em] text-[var(--heading)] md:text-4xl">
+			<h1 className="text-xl font-medium leading-7 text-[var(--heading)]">
 				{children}
 			</h1>
 		</header>

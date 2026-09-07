@@ -20,7 +20,7 @@ const resumePdf = "/resume-sanket-patrikar.pdf";
 
 function SectionTitle({ id, children }: { id: string; children: React.ReactNode }) {
 	return (
-		<h2 id={id} className="border-b border-[var(--border)] pb-3 text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+		<h2 id={id} className="border-b border-[var(--border)] pb-3 text-base font-medium text-[var(--heading)]">
 			{children}
 		</h2>
 	);
@@ -28,13 +28,13 @@ function SectionTitle({ id, children }: { id: string; children: React.ReactNode 
 
 function Resume() {
 	return (
-		<main className="mx-auto w-full max-w-4xl px-6 pb-28 pt-12 sm:px-10 md:mx-auto md:px-12 md:pt-16 lg:px-16">
-			<header className="border-b border-[var(--border)] pb-10">
-				<p className="text-sm font-semibold uppercase tracking-[0.12em] text-accent">Resume</p>
-				<h1 className="mt-4 font-display text-4xl font-bold leading-[1.1] tracking-[-0.04em] text-[var(--heading)] sm:text-5xl">
+		<main className="w-full pb-16">
+			<header className="border-b border-[var(--border)] pb-6">
+				<p className="text-sm font-medium text-muted">Resume</p>
+				<h1 className="mt-2 text-2xl font-medium leading-8 tracking-tight text-[var(--heading)]">
 					Sanket Patrikar
 				</h1>
-				<p className="mt-4 text-base font-medium leading-relaxed sm:text-lg text-[var(--heading)]">
+				<p className="mt-3 text-base font-normal leading-relaxed text-[var(--heading)]">
 					Software Engineer <span className="text-muted">|</span> React, Node.js, PostgreSQL, AWS <span className="text-muted">|</span>{" "}
 					Modernization &amp; Performance
 				</p>
@@ -55,12 +55,12 @@ function Resume() {
 				</div>
 			</header>
 
-			<section className="mt-14" aria-labelledby="experience-heading">
+			<section className="mt-10" aria-labelledby="experience-heading">
 				<SectionTitle id="experience-heading">Experience</SectionTitle>
-				<div className="mt-8">
+				<div className="mt-5">
 					<div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
 						<div>
-							<h3 className="text-lg font-semibold leading-snug tracking-[-0.015em] sm:text-xl text-[var(--heading)]">Kizora Software Pvt. Ltd.</h3>
+							<h3 className="text-base font-medium leading-snug text-[var(--heading)]">Kizora Software Pvt. Ltd.</h3>
 							<p className="mt-1 text-muted">Software Engineer · Nagpur, Maharashtra</p>
 						</div>
 						<p className="shrink-0 text-sm font-normal leading-relaxed tabular-nums text-muted">Sep 2023 - Present</p>
@@ -83,27 +83,27 @@ function Resume() {
 				</div>
 			</section>
 
-			<section className="mt-14" aria-labelledby="skills-heading">
+			<section className="mt-10" aria-labelledby="skills-heading">
 				<SectionTitle id="skills-heading">Technical Skills</SectionTitle>
-				<dl className="mt-8 grid gap-x-10 gap-y-5 sm:grid-cols-[10rem_1fr]">
-					<dt className="font-semibold text-[var(--heading)]">Frontend</dt>
+				<dl className="mt-5 grid gap-x-10 gap-y-5 sm:grid-cols-[10rem_1fr]">
+					<dt className="font-medium text-[var(--heading)]">Frontend</dt>
 					<dd className="m-0 leading-relaxed text-muted">React, TypeScript / JavaScript, Vite, React Query, HTML, CSS</dd>
-					<dt className="font-semibold text-[var(--heading)]">Backend / Database</dt>
+					<dt className="font-medium text-[var(--heading)]">Backend / Database</dt>
 					<dd className="m-0 leading-relaxed text-muted">Node.js, PostgreSQL, MySQL, Query Optimization</dd>
-					<dt className="font-semibold text-[var(--heading)]">Cloud / DevOps</dt>
+					<dt className="font-medium text-[var(--heading)]">Cloud / DevOps</dt>
 					<dd className="m-0 leading-relaxed text-muted">AWS, Docker, Terraform</dd>
-					<dt className="font-semibold text-[var(--heading)]">Testing / Security</dt>
+					<dt className="font-medium text-[var(--heading)]">Testing / Security</dt>
 					<dd className="m-0 leading-relaxed text-muted">Apache JMeter, OWASP ZAP, Vitest, Playwright</dd>
-					<dt className="font-semibold text-[var(--heading)]">Tools</dt>
+					<dt className="font-medium text-[var(--heading)]">Tools</dt>
 					<dd className="m-0 leading-relaxed text-muted">Git, OpenAI Codex, Claude Code</dd>
 				</dl>
 			</section>
 
-			<section className="mt-14" aria-labelledby="education-heading">
+			<section className="mt-10" aria-labelledby="education-heading">
 				<SectionTitle id="education-heading">Education</SectionTitle>
-				<div className="mt-8 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
+				<div className="mt-5 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
 					<div>
-						<h3 className="text-lg font-semibold leading-snug tracking-[-0.015em] sm:text-xl text-[var(--heading)]">KDK College of Engineering</h3>
+						<h3 className="text-base font-medium leading-snug text-[var(--heading)]">KDK College of Engineering</h3>
 						<p className="mt-1 text-muted">Bachelor of Engineering in Information Technology · Nagpur, Maharashtra</p>
 					</div>
 					<p className="shrink-0 text-sm font-normal leading-relaxed tabular-nums text-muted">Aug 2019 - May 2023</p>

@@ -18,11 +18,11 @@ export const Route = createFileRoute("/")({
 
 function App() {
 	return (
-		<main className="mx-auto w-full max-w-[44rem] px-6 pb-6 pt-6 sm:px-10 md:mx-auto md:px-12 md:pt-8 lg:px-16">
+		<main className="w-full max-w-[58ch] pb-12">
 			<section>
-				<div className="mt-6 space-y-5 text-base leading-[1.75] sm:text-lg">
+				<div className="space-y-5 text-base leading-7">
 					<p>
-						<strong className="font-semibold text-[var(--heading)]">Right now,</strong> I
+						<strong className="font-medium text-[var(--heading)]">Right now,</strong> I
 						spend most of my time building software, trying to keep up with the latest AI
 						releases, and reading up on the current in-trend thing on X.
 					</p>
@@ -40,10 +40,10 @@ function App() {
 
 
       <section className="mt-8" aria-labelledby="sections-heading">
-        <h2 id="sections-heading" className="text-sm font-semibold tracking-wide text-muted">
+        <h2 id="sections-heading" className="text-base font-medium text-[var(--heading)]">
           Sections
         </h2>
-        <nav aria-labelledby="sections-heading" className="mt-3">
+        <nav aria-labelledby="sections-heading" className="mt-2">
           <ul className="flex flex-wrap gap-x-3 gap-y-2">
             <li>
               <Link
