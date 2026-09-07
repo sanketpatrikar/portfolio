@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { getCanonicalLink, homeStructuredData } from "@/lib/seo";
 
@@ -29,10 +29,6 @@ function App() {
 					</p>
 					<p>
 						Other interests are reading about astronomy, history, science, urban design, and other branches of technology in general.
-					</p>
-					<p className="flex items-center gap-2 text-sm font-medium leading-relaxed text-muted">
-						<MapPin className="size-4 shrink-0" aria-hidden="true" />
-						Nagpur, India.
 					</p>
 				</div>
 
